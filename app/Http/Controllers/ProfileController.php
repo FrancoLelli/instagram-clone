@@ -14,7 +14,7 @@ class ProfileController extends Controller
 
     public function index(User $user): View
     {
-        return view('profile.index', compact('user'));
+        return view('profiles.index', compact('user'));
     }
 
     public function edit(User $user): View
@@ -23,7 +23,7 @@ class ProfileController extends Controller
             abort(403, 'Unauthorized action.');
         }
 
-        return view('profile.edit', compact('user'));
+        return view('profiles.edit', compact('user'));
     }
     /**
      * Update the specified resource in storage.
